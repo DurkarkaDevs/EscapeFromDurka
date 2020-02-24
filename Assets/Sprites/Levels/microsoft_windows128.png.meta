@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: 3d6be048602793947b1a99e9f7b531f9
+guid: d52adc65cc0c07340af1c214f2fffe95
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3432048379239998622
-    second: Sanitar_0
+      213: -1945618836270019472
+    second: microsoft_windows128_0
   - first:
-      213: -2255474018218855692
-    second: Sanitar_1
+      213: -1397667364680797943
+    second: microsoft_windows128_1
   - first:
-      213: -629031085110587381
-    second: Sanitar_2
+      213: 6412735048535005985
+    second: microsoft_windows128_2
   - first:
-      213: 4414494671537369696
-    second: Sanitar_3
-  - first:
-      213: -6861737548271858252
-    second: Sanitar_4
-  - first:
-      213: -1377133118482316173
-    second: Sanitar_5
-  - first:
-      213: -6259790291627334243
-    second: Sanitar_6
-  - first:
-      213: -3226458067006566865
-    second: Sanitar_7
+      213: -3468018272260497536
+    second: microsoft_windows128_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -55,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -69,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -86,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -98,7 +86,19 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -110,127 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sanitar_0
+      name: microsoft_windows128_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 0
-        width: 23
+        x: 0
+        y: 64
+        width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e942e8031d511af20800000000000000
-      internalID: 3432048379239998622
+      spriteID: 07c01db0af5cff4e0800000000000000
+      internalID: -1945618836270019472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanitar_1
+      name: microsoft_windows128_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 0
-        width: 23
+        x: 64
+        y: 64
+        width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f231f79452f2b0e0800000000000000
-      internalID: -2255474018218855692
+      spriteID: 9017b0edfec7a9ce0800000000000000
+      internalID: -1397667364680797943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanitar_2
+      name: microsoft_windows128_2
       rect:
         serializedVersion: 2
-        x: 70
+        x: 0
         y: 0
-        width: 23
+        width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b001e439f8b3547f0800000000000000
-      internalID: -629031085110587381
+      spriteID: 12b50aeec8c9ef850800000000000000
+      internalID: 6412735048535005985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanitar_3
+      name: microsoft_windows128_3
       rect:
         serializedVersion: 2
-        x: 102
+        x: 64
         y: 0
-        width: 23
+        width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 062f6d7c38f634d30800000000000000
-      internalID: 4414494671537369696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sanitar_4
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 0
-        width: 23
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bdcb4d0e0636c0a0800000000000000
-      internalID: -6861737548271858252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sanitar_5
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 0
-        width: 23
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3748f60a9b073ece0800000000000000
-      internalID: -1377133118482316173
+      spriteID: 08f595771cf1fdfc0800000000000000
+      internalID: -3468018272260497536
       vertices: []
       indices: 
       edges: []

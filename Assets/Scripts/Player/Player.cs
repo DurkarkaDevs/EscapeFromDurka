@@ -12,26 +12,23 @@ public class Player : EntityBaseClass
     public float movementSmoothing = .05f;
 
     private Rigidbody2D rb;
-    private BoxCollider2D boxCollider2D;
+    private CapsuleCollider2D collider;
     public LayerMask groundLayer;
     private Vector3 velocity = Vector3.zero;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        collider = GetComponent<CapsuleCollider2D>();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
-        
-
-        
-        
         
     }
 
@@ -42,6 +39,10 @@ public class Player : EntityBaseClass
         Vector3 targetVelocity = new Vector2(move * 10f, rb.velocity.y);
 
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothing);
+        if(Input.GetButton("Fire1"))
+        {
+            Debug.Log("Firing!");
+        }
         if (move > 0 && !facing_right)
         {
             Flip();
@@ -50,7 +51,7 @@ public class Player : EntityBaseClass
         {
             Flip();
         }
-
+        Debug.Log(IsGrounded());
         //Jumping physics
         if (Input.GetButton("Jump") && IsGrounded())
         {
@@ -70,18 +71,7 @@ public class Player : EntityBaseClass
     private bool IsGrounded()
     {
 
-        RaycastHit2D raycastHit = Physics2D.Raycast(boxCollider2D.bounds.center, Vector2.down, boxCollider2D.bounds.extents.y + .05f, groundLayer);
-        Color rayColor;
-        if(raycastHit.collider != null)
-        {
-            rayColor = Color.green;
-        }else
-        {
-            rayColor = Color.red;
-        }
-
-        Debug.DrawRay(boxCollider2D.bounds.center, Vector2.down * (boxCollider2D.bounds.extents.y + .05f), Color.green);
-
+        RaycastHit2D raycastHit = Physics2D.Raycast(collider.bounds.center, Vector2.down, collider.bounds.extents.y + .05f, groundLayer);
         return raycastHit.collider != null;
 
     }
