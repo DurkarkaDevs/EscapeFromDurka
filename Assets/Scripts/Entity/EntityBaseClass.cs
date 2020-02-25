@@ -15,14 +15,17 @@ public class EntityBaseClass : MonoBehaviour
 
     public void TakeDamage(float damage_amount)
     {
-
+        if (damage_amount > hp)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        hp -= damage_amount;
     }
 
     protected void Flip()
     {
         facing_right = !facing_right;
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        transform.Rotate(0f, 180f, 0f);
     }
 }

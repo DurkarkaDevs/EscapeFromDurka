@@ -11,6 +11,10 @@ public class Player : EntityBaseClass
     [Header("Movement Physics")]
     public float movementSmoothing = .05f;
 
+    [Header("In-game constants")]
+    public Transform firePoint;
+    public GameObject bulletPrefab;
+
     private Rigidbody2D rb;
     private CapsuleCollider2D collider;
     public LayerMask groundLayer;
@@ -39,10 +43,7 @@ public class Player : EntityBaseClass
         Vector3 targetVelocity = new Vector2(move * 10f, rb.velocity.y);
 
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothing);
-        if(Input.GetButton("Fire1"))
-        {
-            Debug.Log("Firing!");
-        }
+        
         if (move > 0 && !facing_right)
         {
             Flip();
@@ -51,7 +52,7 @@ public class Player : EntityBaseClass
         {
             Flip();
         }
-        Debug.Log(IsGrounded());
+        // Debug.Log(IsGrounded());
         //Jumping physics
         if (Input.GetButton("Jump") && IsGrounded())
         {

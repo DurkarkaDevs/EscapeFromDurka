@@ -6,32 +6,44 @@ public class Ammo : MonoBehaviour
 {
     [Header("Specs")]
     public float damage = 0.1f;
-    public float speed = 20f;
+    public float lifetime = 10f;
+    public float speed = 10f;
 
-    [Header("Optimizations")]
-    public float lifetime = 20f;
+    [Header("In-Game Constants")]
+    public GameObject deathEffect;
 
-    private Rigidbody2D rigidBody2d;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        rigidBody2d = GetComponent<Rigidbody2D>();
-        rigidBody2d.velocity = transform.right * speed;
-        StartCoroutine(LifeTime());
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = -transform.right * speed;
+        StartCoroutine(Lifetime());
+
     }
 
-    IEnumerator LifeTime()
+    private IEnumerator Lifetime()
     {
         yield return new WaitForSeconds(lifetime);
         Destroy(gameObject);
     }
+    
 
-    void OnTriggerEnter2D(Collider2D hitInfo)
+
+
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        EntityBaseClass entity = hitInfo.GetComponent<EntityBaseClass>();
+        if (collider.tag == "Bullet") return;
+        EntityBaseClass entity = collider.GetComponent<EntityBaseClass>();
+        if (deathEffect != null) {
+            Instantiate(deathEffect, transform.position, transform.rotation);
+        }
         if(entity != null)
+        {
+            
             entity.TakeDamage(damage);
+        }
         Destroy(gameObject);
     }
 }

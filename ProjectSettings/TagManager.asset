@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KillTrigger
   - AngledPlatform
+  - Bullet
   layers:
   - Default
   - TransparentFX
