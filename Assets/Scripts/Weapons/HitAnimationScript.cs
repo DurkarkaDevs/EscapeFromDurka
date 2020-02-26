@@ -20,5 +20,4 @@ public class HitAnimationScript : MonoBehaviour
         yield return new WaitForSeconds(sleep_am);
         Destroy(gameObject);
     }
-
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Pistol : BaseWeapon
 {
-
     [Header("Specs")]
     public int ammo_in_clip = 2;
     [Range(1, 10)]
