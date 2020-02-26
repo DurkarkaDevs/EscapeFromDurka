@@ -37,7 +37,6 @@ public class Ammo : MonoBehaviour
         }
         if(entity != null)
         {
-            
             entity.TakeDamage(damage);
         }
         Destroy(gameObject);
