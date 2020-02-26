@@ -20,20 +20,11 @@ public class Player : EntityBaseClass
     public LayerMask groundLayer;
     private Vector3 velocity = Vector3.zero;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<CapsuleCollider2D>();
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void FixedUpdate()
@@ -71,13 +62,7 @@ public class Player : EntityBaseClass
 
     private bool IsGrounded()
     {
-
         RaycastHit2D raycastHit = Physics2D.Raycast(collider.bounds.center, Vector2.down, collider.bounds.extents.y + .05f, groundLayer);
         return raycastHit.collider != null;
-
     }
-
-
-
-
 }

@@ -20,7 +20,6 @@ public class Ammo : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = -transform.right * speed;
         StartCoroutine(Lifetime());
-
     }
 
     private IEnumerator Lifetime()
@@ -29,9 +28,6 @@ public class Ammo : MonoBehaviour
         Destroy(gameObject);
     }
     
-
-
-
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "Bullet") return;
