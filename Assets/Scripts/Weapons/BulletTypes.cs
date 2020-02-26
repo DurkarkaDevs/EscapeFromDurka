@@ -5,6 +5,4 @@ using UnityEngine;
 public enum BulletTypes
 {
     Tranquilizer = 0,
-
-    
 }

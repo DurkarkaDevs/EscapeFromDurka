@@ -13,7 +13,6 @@ public class Pistol : BaseWeapon
     public float reload_time = 2.0f;
     public float timeBetweenShots = 2.5f;
 
-
     [Header("In-Game constants")]
     public GameObject bulletPrefab;
     public Transform firePoint;
@@ -44,13 +43,10 @@ public class Pistol : BaseWeapon
         current_ammo_count = ammo_in_clip;
     }
 
-
-
     void Shoot()
     {
         if (current_time_between_shots <= 0)
         {
-            
             Instantiate(bulletPrefab, firePoint.position, transform.rotation);
             current_time_between_shots = timeBetweenShots;
         }

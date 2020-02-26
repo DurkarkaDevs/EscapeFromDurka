@@ -10,8 +10,6 @@ public class EntityBaseClass : MonoBehaviour
     public float jumpforce = 10f;
 
     protected bool facing_right = false;
-    
-
 
     public void TakeDamage(float damage_amount)
     {
